@@ -53,9 +53,9 @@ namespace ZoeConroy_s000196433
             if (selectedGame != null)
             {
                 //Amended for Q8 
-                /* imgGame.Source = new BitmapImage(new Uri(selectedGame.GameImage, UriKind.Relative));
-                  */
-                imgGame.Text = $"{selectedGame.CriticScore}";
+                imgGame.Source = new BitmapImage(new Uri(selectedGame.GameImage, UriKind.Relative));
+                  
+                
                 tblkGameDetails.Text = $"{selectedGame.Price:C}";
             }
 

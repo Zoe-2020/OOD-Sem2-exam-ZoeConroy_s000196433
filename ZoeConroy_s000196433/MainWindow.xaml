@@ -14,8 +14,9 @@
         
         <DataTemplate x:Key="listboxTemplate">
             <StackPanel Orientation="Horizontal">
-                <Image Source="{Binding GameImage}" Width="165"/>
-             <!--   <TextBlock Margin="5" Text="{Binding Name}" VerticalAlignment="Center"/> -->
+                <Image Source="{Binding GameImage}" Width="100"/>
+                <TextBlock Margin="5" Text="{Binding Name}" VerticalAlignment="Center"/>
+                <TextBlock Margin="5" Text="{Binding CriticScore}" VerticalAlignment="Center"/>
             </StackPanel>
         </DataTemplate>
         </Window.Resources>
@@ -25,10 +26,10 @@
         <CheckBox x:Name="chbXbox" Content="XBOX" HorizontalAlignment="Left" Margin="185,32,0,0" VerticalAlignment="Top" Click="Chbx_Click"/>
         <CheckBox x:Name="chbPS" Content="PS" HorizontalAlignment="Left" Margin="110,32,0,0" VerticalAlignment="Top" Click="Chbx_Click" Height="27"/>
         <CheckBox x:Name="chbSwitch" Content="Switch" HorizontalAlignment="Left" Margin="259,32,0,0" VerticalAlignment="Top" Click="Chbx_Click"/> -->
-        <ListBox  ItemTemplate="{StaticResource ResourceKey=listboxTemplate}" x:Name="lbxGames" HorizontalAlignment="Left" Height="247" Margin="110,76,0,0" VerticalAlignment="Top" Width="225" SelectionChanged="lbxGames_SelectionChanged" />
+        <ListBox  ItemTemplate="{StaticResource ResourceKey=listboxTemplate}" x:Name="lbxGames" HorizontalAlignment="Left" Height="247" Margin="110,76,0,0" VerticalAlignment="Top" Width="300" SelectionChanged="lbxGames_SelectionChanged" />
 
-        <TextBlock x:Name="imgGame" HorizontalAlignment="Left" Height="176" Margin="455,147,0,0" VerticalAlignment="Top" Width="165"/>
-        <!--  <Image x:Name="imgGame" HorizontalAlignment="Left" Height="176" Margin="455,147,0,0" VerticalAlignment="Top" Width="165"/> -->
+       
+        <Image x:Name="imgGame" HorizontalAlignment="Left" Height="176" Margin="455,147,0,0" VerticalAlignment="Top" Width="165"/> 
             <TextBlock x:Name="tblkGameDetails" HorizontalAlignment="Left" Margin="455,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="165" FontSize="24"/>
 
 
