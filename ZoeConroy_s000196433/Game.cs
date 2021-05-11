@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZoeConroy_s000196433
 {
-    class Game
+   public class Game
     {
 
         public int ID { get; set; }
@@ -17,9 +17,19 @@ namespace ZoeConroy_s000196433
         public double Price { get; set; }
         public string Game_Image { get; set; }
 
+        public Game(string _Name, double _MetacriticScore, string _Description, string _Platform , double _Price ,string _GameImage = "")
+        {
+            Name = _Name;
+            MetacriticScore = _MetacriticScore;
+            Description = _Description;
+            Platform = _Platform;
+            Price = _Price;
+            Game_Image = _GameImage;
+        }
+
         public void DecreasePrice(double decrease)
         {
-            Price *= (double)(1 + decrease);
+            Price *= (double)(1 - decrease);
         }
 
 
