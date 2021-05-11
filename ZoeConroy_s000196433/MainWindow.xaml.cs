@@ -29,6 +29,7 @@ namespace ZoeConroy_s000196433
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //takes data from database ands them too AllGames
             GameData db = new GameData();
 
             var query = from g in db.Games
@@ -46,15 +47,21 @@ namespace ZoeConroy_s000196433
 
         private void lbxGames_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //when a game selected in left listbox it displays score and price
             Game selectedGame = lbxGames.SelectedItem as Game;
 
             if (selectedGame != null)
             {
-                imgGame.Source = new BitmapImage(new Uri(selectedGame.GameImage, UriKind.Relative));
+                //Amended for Q8 
+                /* imgGame.Source = new BitmapImage(new Uri(selectedGame.GameImage, UriKind.Relative));
+                  */
+                imgGame.Text = $"{selectedGame.CriticScore}";
                 tblkGameDetails.Text = $"{selectedGame.Price:C}";
             }
 
         }
+        
+        //was too filter but ran out of time and it would cause errors to run without it working 
 
        /* private void Chbx_Click(object sender, RoutedEventArgs e)
         {
