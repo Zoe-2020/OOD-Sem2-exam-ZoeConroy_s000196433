@@ -17,5 +17,11 @@ namespace ZoeConroy_s000196433
         public double Price { get; set; }
         public string Game_Image { get; set; }
 
+        public void DecreasePrice(double decrease)
+        {
+            Price *= (double)(1 + decrease);
+        }
+
+
     }
 }
