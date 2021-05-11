@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace ZoeConroy_s000196433
 {
@@ -11,27 +12,42 @@ namespace ZoeConroy_s000196433
 
         public int ID { get; set; }
         public string Name { get; set; }
-        public double MetacriticScore { get; set; }
+        public double CriticScore { get; set; }
         public string Description { get; set; }
         public string Platform { get; set; }
-        public double Price { get; set; }
-        public string Game_Image { get; set; }
+        public decimal Price { get; set; }
+        public string GameImage { get; set; }
 
-        public Game(string _Name, double _MetacriticScore, string _Description, string _Platform , double _Price ,string _GameImage = "")
+        public Game(string _Name, double _CriticScore, string _Description, string _Platform , decimal _Price ,string _GameImage = "")
         {
             Name = _Name;
-            MetacriticScore = _MetacriticScore;
+            CriticScore = _CriticScore;
             Description = _Description;
             Platform = _Platform;
             Price = _Price;
-            Game_Image = _GameImage;
+            GameImage = _GameImage;
+        }
+
+        public Game()
+        {
+        }
+
+        public override string ToString()
+        {
+            return Name;
         }
 
         public void DecreasePrice(double decrease)
         {
-            Price *= (double)(1 - decrease);
+            Price *= (decimal)(1 - decrease);
         }
 
 
+    }
+    public class GameData : DbContext
+    {
+        public GameData() : base("GameInformation") { }
+
+        public DbSet<Game> Games { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace UnitTestProject1
             public void TestPriceDecrease()
             {
                 Game p1 = new Game("Mario  64", 95, "platform game for the Nintendo 64 and the first Super Mario game to feature 3D gameplay", "Nintendo 64", 50);
-                double finalPrice = 45;
+                decimal finalPrice = 45;
 
                 
                 p1.DecreasePrice(.10);

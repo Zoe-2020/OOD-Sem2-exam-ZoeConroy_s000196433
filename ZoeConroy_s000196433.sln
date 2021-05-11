@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZoeConroy_s000196433", "Zoe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{7FF25F32-03C2-4541-AF3E-57BAA2D1330B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMangement", "DataMangement\DataMangement.csproj", "{721539AF-1D58-4933-AD02-6ADDBDB50D85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7FF25F32-03C2-4541-AF3E-57BAA2D1330B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FF25F32-03C2-4541-AF3E-57BAA2D1330B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FF25F32-03C2-4541-AF3E-57BAA2D1330B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{721539AF-1D58-4933-AD02-6ADDBDB50D85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{721539AF-1D58-4933-AD02-6ADDBDB50D85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{721539AF-1D58-4933-AD02-6ADDBDB50D85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{721539AF-1D58-4933-AD02-6ADDBDB50D85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
