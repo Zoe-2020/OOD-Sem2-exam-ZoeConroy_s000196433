@@ -21,6 +21,7 @@ namespace ZoeConroy_s000196433
     public partial class MainWindow : Window
     {
         List<Game> AllGames;
+        public List<Game> filteredGames;
         public MainWindow()
         {
             InitializeComponent();
@@ -36,6 +37,11 @@ namespace ZoeConroy_s000196433
             AllGames = query.ToList();
 
             lbxGames.ItemsSource = AllGames;
+
+           /* chbPC.IsChecked = true;
+            chbXbox.IsChecked = true;
+            chbPS.IsChecked = true;
+            chbSwitch.IsChecked = true;*/
         }
 
         private void lbxGames_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -50,5 +56,87 @@ namespace ZoeConroy_s000196433
 
         }
 
+       /* private void Chbx_Click(object sender, RoutedEventArgs e)
+        {
+
+            //all games
+            if ((chbPC.IsChecked == true) && (chbXbox.IsChecked == true) && (chbPS.IsChecked == true) && (chbSwitch.IsChecked == true))
+                UpdateListBox(AllGames);
+
+            //no games
+            else if ((chbPC.IsChecked == false) && (chbXbox.IsChecked == false) && (chbPS.IsChecked == false) && (chbSwitch.IsChecked == false))
+                lbxGames.ItemsSource = null;
+
+            //PC
+            else if ((chbPC.IsChecked == true) && (chbXbox.IsChecked == false) && (chbPS.IsChecked == false) && (chbSwitch.IsChecked == false))
+            {
+                AllGames.Clear();
+
+                for (int i = 0; i < AllGames.Count; i++)
+                {
+                    if (AllGames[i].Platform.Contains("PC"))
+                        lbxGames.ItemsSource = AllGames[i].ToString();
+                }
+
+                UpdateListBox(filteredGames);
+            }
+
+            // xbox
+            else if ((chbPC.IsChecked == false) && (chbXbox.IsChecked == true) && (chbPS.IsChecked == false) && (chbSwitch.IsChecked == false))
+            {
+                filteredGames.Clear();
+
+                for (int i = 0; i < AllGames.Count; i++)
+                {
+                    if (AllGames[i].Platform.Contains("Xbox"))
+                        lbxGames.ItemsSource = AllGames[i].ToString();
+                }
+                UpdateListBox(filteredGames);
+            }
+
+          
+                //PS
+            else if ((chbPC.IsChecked == false) && (chbXbox.IsChecked == false) && (chbPS.IsChecked == true) && (chbSwitch.IsChecked == false))
+                {
+                    filteredGames.Clear();
+
+                    for (int i = 0; i < AllGames.Count; i++)
+                    {
+                        if (AllGames[i].Platform.Contains("PS"))
+                            lbxGames.ItemsSource = AllGames[i].ToString();
+                    }
+
+                    UpdateListBox(filteredGames);
+                }
+
+                //switch
+                else if ((chbPC.IsChecked == false) && (chbXbox.IsChecked == false) && (chbPS.IsChecked == false) && (chbSwitch.IsChecked == true))
+                {
+                    filteredGames.Clear();
+
+                    for (int i = 0; i < AllGames.Count; i++)
+                    {
+                        if (AllGames[i].Platform.Contains("Switch"))
+                            lbxGames.ItemsSource = AllGames[i].ToString();
+                    }
+
+                    UpdateListBox(filteredGames);
+
+                }
+
+            }
+
+            private void UpdateListBox(List<Game> AllGames)
+            {
+
+
+                //Refreshes the display
+                lbxGames.ItemsSource = null;
+                lbxGames.ItemsSource = AllGames;
+
+            }*/
+
+        }
     }
-}
+
+    
